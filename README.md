@@ -34,7 +34,7 @@ customer-shopping-behavior/
 
 ---
 
-## 🔧 Tools & Technologies
+##  Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
@@ -96,15 +96,11 @@ Key steps performed:
 | Q8 | Top 3 most purchased products per category |
 | Q9 | Repeat buyers and their subscription likelihood |
 | Q10 | Revenue contribution by age group |
-| Bonus | Top 3 products by revenue per category (Window Function) |
 
 ### Key SQL Techniques Used:
 - Aggregate functions (`SUM`, `AVG`, `COUNT`, `ROUND`)
 - Subqueries
 - `CASE WHEN` statements
-- CTEs (`WITH` clause)
-- Window functions (`ROW_NUMBER() OVER PARTITION BY`)
-
 ---
 
 ##  Step 3 — Power BI: Interactive Dashboard
