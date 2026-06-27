@@ -100,6 +100,8 @@ Key steps performed:
 - Aggregate functions (`SUM`, `AVG`, `COUNT`, `ROUND`)
 - Subqueries
 - `CASE WHEN` statements
+- CTEs (`WITH` clause)
+- Window functions (`ROW_NUMBER() OVER PARTITION BY`)
 ---
 
 ##  Step 3 — Power BI: Interactive Dashboard
@@ -185,7 +187,3 @@ jupyter notebook python/Customer_shopping_behavior.ipynb
 - Build visuals as described in dashboard section
 
 ---
-
-## 👤 Author
-
-> Built as part of an industry-standard End-to-End Data Analytics Portfolio project.
