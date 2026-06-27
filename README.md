@@ -33,7 +33,7 @@ customer-shopping-behavior/
 
 ---
 
-## Công cụ & Công nghệ
+## Công cụ
 
 | Công cụ | Mục đích |
 |---|---|
@@ -167,7 +167,7 @@ Các bước thực hiện:
 
 ---
 
-## Hướng dẫn chạy dự án
+## Hướng dẫn chạy
 
 ### Python
 ```bash
