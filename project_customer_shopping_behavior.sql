@@ -80,17 +80,3 @@ SELECT
 FROM customer
 GROUP BY age_group
 ORDER BY total_revenue desc;
-
-WITH item_revenue AS (
-    SELECT category,
-           item_purchased,
-           SUM(purchase_amount) AS total_revenue,
-           ROW_NUMBER() OVER (PARTITION BY category ORDER BY SUM(purchase_amount) DESC) AS item_rank
-    FROM customer
-    GROUP BY category, item_purchased
-)
-SELECT item_rank, category, item_purchased, total_revenue
-FROM item_revenue
-WHERE item_rank <= 3
-ORDER BY category, item_rank;
-
