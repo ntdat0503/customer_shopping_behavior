@@ -1,4 +1,3 @@
-# customer_shopping_behavior
 #  Customer Shopping Behavior 
 
 A data analytics project analyzing customer shopping behavior using **Python**, **MySQL**, and **Power BI**.
