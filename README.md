@@ -208,9 +208,9 @@ Các bước thực hiện:
 ## Hướng dẫn chạy
 
 ### Python trên Google Colab
-```bash
-pip install pandas jupyter
-jupyter notebook python/Customer_shopping_behavior.ipynb
+```python
+-- Mở Google Colab
+-- Upload file 'Customer_shopping_behavior.ipynb' và chạy toàn bộ code
 ```
 
 ### MySQL
