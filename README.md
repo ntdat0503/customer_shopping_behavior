@@ -208,16 +208,12 @@ Các bước thực hiện:
 ## Hướng dẫn chạy
 
 ### Python trên Google Colab
-```python
--- Mở Google Colab
--- Upload file 'Customer_shopping_behavior.ipynb' và chạy toàn bộ code
-```
+- Mở Google Colab
+- Upload file 'Customer_shopping_behavior.ipynb' và chạy toàn bộ code
 
 ### MySQL
-```sql
--- Tạo database và bảng, sau đó import file customer_shopping_behavior_full.csv
--- Chạy các câu truy vấn trong file sql/project_customer_shopping_behavior.sql
-```
+- Tạo database và bảng, sau đó import file customer_shopping_behavior_full.csv
+- Chạy các câu truy vấn trong file sql/project_customer_shopping_behavior.sql
 
 ### Power BI
 - Mở Power BI Desktop
