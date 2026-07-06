@@ -54,15 +54,15 @@ customer-shopping-behavior/
 ## Quy trình thực hiện
 
 ```
-01 Xác định vấn đề kinh doanh
+1 Xác định vấn đề kinh doanh
         ↓ Import dữ liệu vào Python
-02 Mô hình hóa dữ liệu & EDA trong Python
+2 Mô hình hóa dữ liệu & EDA trong Python
         ↓ Load vào cơ sở dữ liệu SQL
-03 Phân tích dữ liệu bằng SQL
+3 Phân tích dữ liệu bằng SQL
         ↓ Kết nối với Power BI
-04 Xây dựng Dashboard tương tác bằng Power BI
+4 Xây dựng Dashboard tương tác bằng Power BI
         ↓ Tổng hợp kết quả
-05 Báo cáo dự án (README này)
+5 Báo cáo dự án (README)
 ```
 
 ---
