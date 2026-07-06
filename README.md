@@ -3,6 +3,13 @@
 Dự án phân tích dữ liệu hành vi mua sắm của khách hàng sử dụng **Python**, **MySQL** và **Power BI**.
 
 ---
+## Bối cảnh và mục tiêu phân tích
+
+- Về bối cảnh giả định: Dự án được thực hiện trong bối cảnh một shop đang cần đánh giá lại hiệu quả hoạt động kinh doanh hiện tại, cụ thể là cần xử lý ba vấn đề sau:
+  + Chương trình subscription có đang mang lại hieuj quả tương xứng với chi phí bỏ ra không?
+  + Nhóm khách hàng, theo giới tính và độ tuổi, và nhóm sản phẩm nào nên được ưu tiên trong các chiến dịch quảng cáo để tối ưu hiệu quả?
+  
+- Về mục tiêu phân tích: Xác định các nhóm khách hàng và sản phẩm đóng góp doanh thu nhiều nhất, đánh giá hiệu quả thực sự của subscribed customer, từ đó đưa ra đề xuất hành động cụ thể.
 
 ## Tổng quan dự án
 
@@ -40,7 +47,7 @@ customer-shopping-behavior/
 | Python (Pandas) | Làm sạch dữ liệu, EDA, tạo đặc trưng |
 | MySQL | Lưu trữ dữ liệu & phân tích SQL |
 | Power BI | Dashboard tương tác & trực quan hóa |
-| GitHub | Quản lý phiên bản & lưu trữ portfolio |
+| GitHub | Quản lý phiên bản & lưu trữ project |
 
 ---
 
@@ -119,7 +126,7 @@ Các bước thực hiện:
 - Doanh thu từ subscription: $62.65K
 
 **Biểu đồ:**
-- Phân chia theo giới tính (Donut chart)
+- Phân chia theo giới tính (Donut chart): Nữ 68%, Nam 32%
 - Số lượng khách hàng theo tuổi (Bar chart)
 - Khách hàng có/không có subscription (Pie chart)
 - Doanh số & Doanh thu theo nhóm tuổi (Area + Bar chart)
@@ -158,18 +165,49 @@ Các bước thực hiện:
 
 ## Kết quả & Insights chính
 
-- **Khách hàng nữ** chiếm 68% tổng số khách hàng và đóng góp phần lớn doanh thu
-- **Young Adults** tạo ra doanh thu cao nhất trong tất cả các nhóm tuổi
-- **Clothing** là danh mục bán chạy nhất cả về doanh số lẫn doanh thu
-- **Khách hàng có subscription** đóng góp $62.65K — khoảng 27% tổng doanh thu
-- **Blouse, Shirt và Dress** là 3 sản phẩm có doanh thu cao nhất
-- **Gloves** có rating trung bình cao nhất (3.86 / 5)
+### a) Tổng quan tình hình kinh doanh
+- **Tổng doanh thu**: $233,080
+- **Giá trị đơn hàng trung bình**: $59.76
+- **Tổng số khách hàng**: 3,900 người
+- **Điểm đánh giá trung bình**: 3.75/5
+- **Doanh thu từ Subscription**: $62,650 (chiếm khoảng 27% tổng doanh thu)
+
+### b) Khách hàng chủ lực là ai?
+- **Giới tính**: Nữ chiếm **68%** (2.65K), Nam chiếm 32%.
+- **Độ tuổi**: Nhóm Adult (32-44 tuổi) và Middle-aged (45-57 tuổi) mua nhiều nhất.
+- **Subscription**: Khách không đăng ký chiếm 73%, nhưng khách đăng ký mang lại doanh thu cao hơn đáng kể.
+
+**Kết luận**: Khách hàng chính là **phụ nữ từ 32-57 tuổi**.
+
+### c) Sản phẩm bán chạy
+- **Top sản phẩm theo doanh thu**: Blouse, Shirt, Dress, Pants, Jewelry.
+- **Theo số lượng**: Clothing (quần áo) bán chạy nhất, sau đó là Accessories.
+- **Theo đánh giá**: Găng tay, Sandals, Boots được khách hàng đánh giá cao nhất.
+
+### d) Phân tích sâu về doanh thu
+
+**Tại sao doanh thu cao?**
+- Nhóm Adult và Middle-aged mua rất nhiều → Đây là hai nhóm đóng góp chính vào doanh thu.
+- Loại sản phẩm Clothing mang lại doanh thu lớn nhất.
+- Khách hàng đăng ký Subscription dù ít hơn nhưng chi tiêu nhiều hơn → Họ là khách hàng trung thành.
+
+**Tính bền vững?**
+- Hiện tại doanh thu đang tốt nhờ nhóm khách hàng trung niên nữ.
+- Tuy nhiên, nhóm Young Adult (18-31) và Senior (58+) mua ít hơn → Có nguy cơ mất cân bằng nếu chỉ dựa vào một nhóm tuổi.
+- Điểm đánh giá trung bình 3.75 chưa cao → Cần cải thiện chất lượng sản phẩm/dịch vụ.
+
+### e) Đề xuất
+- **Tập trung vào tệp khách hàng chính**: Thiết kế chương trình khuyến mãi đặc biệt cho phụ nữ 32-57 tuổi
+- **Tăng doanh thu Subscription**: Khuyến khích khách hàng đăng ký gói thành viên bằng ưu đãi hấp dẫn (voucher, giảm giá, quà tặng,...) --> Mục tiêu tăng tỉ lệ Subscription từ 27 lên 40% trong 6 tháng
+- **Cải thiện sản phẩm**: Đẩy mạnh bán Clothing và Accessories, cải thiện chất lượng Footwear và Outerwear, tập trung vào các sản phẩm có đánh giá cao.
+- **Thu hút nhóm trẻ và người lớn tuổi**: Nhằm thu hút lứa KH Young Adult, có thể làm marketing trên Tiktok, Instagram hay Facebook với style trẻ trung. Còn với lứa KH Senior, thiết kế sản phẩm dễ mặc, thoải mái, có chương trình giảm giá, ưu đãi cho người lớn tuổi.
+- **Nâng cao trải nghiệm khách hàng**: Tăng điểm đánh giá trung bình lên trên 4.0 bằng cách cải thiện chất lượng sản phẩm và dịch vụ CSKH.
 
 ---
 
 ## Hướng dẫn chạy
 
-### Python
+### Python trên Google Colab
 ```bash
 pip install pandas jupyter
 jupyter notebook python/Customer_shopping_behavior.ipynb
